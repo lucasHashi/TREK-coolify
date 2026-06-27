@@ -1,7 +1,8 @@
 services:
   app:
-    # ⚠️ ATENÇÃO: Veja a nota sobre "Fork" abaixo antes de decidir entre 'image' ou 'build'
-    image: mauriceboe/trek:dev
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: trek
     read_only: true
     security_opt:
